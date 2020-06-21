@@ -1,0 +1,31 @@
+{
+  "generator-ngx-rocket": {
+    "version": "6.2.1",
+    "props": {
+      "location": "path",
+      "strict": false,
+      "skipInstall": false,
+      "skipQuickstart": false,
+      "initGit": true,
+      "appName": "ngx-rocket-starter",
+      "target": [
+        "web"
+      ],
+      "pwa": false,
+      "ui": "material",
+      "layout": "side-menu",
+      "auth": true,
+      "lazy": false,
+      "angulartics": false,
+      "tools": [
+        "prettier",
+        "hads"
+      ],
+      "utility": [],
+      "projectName": "ngx-rocket-starter",
+      "packageManager": "npm",
+      "mobile": [],
+      "desktop": []
+    }
+  }
+}

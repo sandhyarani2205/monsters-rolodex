@@ -1,0 +1,20 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1.5fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(200px, auto);
+    width: 700px;
+    border: 1px solid gray;
+}
+
+.card {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+.price {
+    width: 250px;
+    border: 1px solid gray;
+    padding: 50px;
+    margin: 20px;
+}

@@ -1,0 +1,117 @@
+<!-- <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header> -->
+<!-- mouse hover change implementation -->
+<!-- <img [src]="base64Gif" /> -->
+<!-- <img mat-card-image [src]="defaultImage" alt="Photo of a Shiba Inu" (mouseover)="defaultImage = 'http://www.impresabaraldo.it/Blog/wp-content/uploads/2015/05/casa-ecologica-vicenza.jpg'" (mouseout)="defaultImage = 'https://www.ediltecnico.it/wp-content/uploads/2017/06/casa-300x223.png'">
+    <img mat-card-image [src]="defaultImage" alt="Photo of a Shiba Inu" (mouseover)="mouseHoverEvent()" (mouseout)="mouseLeaveEvent()"> -->
+
+
+<!-- actualcode -->
+<mat-card class="container search-results">
+    <div class="row">
+        <div class="col-md-2 col-xs-5  hovereffect" *ngFor="let image of displayImage; let i = index">
+            <img class="img-responsive" mat-card-image [src]="image.img[0]" (mouseenter)="mousehoverEvent(i)" (mouseout)="mouseLeaveEvent()">
+            <mat-card-content class=" overlay">
+                <p class="icon-links">
+
+                    <!--               
+                <div>
+                    <span class="selling-price"> <b>Rs. {{image.selling_price}}</b>
+                    </span>
+                </div>
+                <div *ngIf="image.discount>0">
+                    <span class="strike-text light">Rs. {{image.mrp}}</span>
+                </div>
+                <div class="light" *ngIf="image.discount>0">
+                    <span>(Discount {{image.discount}}%)</span>
+                </div>
+                <button>BUY</button> -->
+
+
+                    <a href="#">
+                        <span>
+                            <b>Rs. {{image.selling_price}}</b>
+                        </span>
+                    </a>
+                    <a href="#" *ngIf="image.discount>0">
+                        <span class="strike-text">
+                            Rs. {{image.mrp}}
+                        </span>
+                    </a>
+                    <a href="#">
+                        <span *ngIf="image.discount>0">
+                            (Discount {{image.discount}}%)
+                        </span>
+                    </a>
+
+                </p>
+            </mat-card-content>
+        </div>
+    </div>
+</mat-card>
+
+<!-- <div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-3 col-xs-5">
+            <mat-card *ngFor="let image of displayImage; let i = index">
+                <img class="img-responsive" mat-card-image [src]="image.img[0]">
+            </mat-card>
+        </div>
+
+    </div>
+
+</div> -->
+
+
+
+
+
+<!-- infinite scroll -->
+<!-- <div class="container">
+
+    <cdk-virtual-scroll-viewport itemSize="200" class="viewport">
+
+        <mat-card *cdkVirtualFor="let image of displayImage; let i = index">
+
+            <img mat-card-image [src]="image.img[0]">
+
+        </mat-card>
+
+    </cdk-virtual-scroll-viewport>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+<!-- <img mat-card-image [src]="defaultImage" alt="Photo of a Shiba Inu" on-mouseover='over()'> -->
+<!-- implemented later 
+    <mat-card-actions>
+        <button routerLink="/Details" routerLinkActive="active" mat-button (click)="clickedOnDetails()">DETAILS</button>
+        <button mat-button>SHARE</button>
+    </mat-card-actions> -->
+
+<!-- carousel implementation-->
+<!-- <ngb-carousel #carousel interval="1000" data-interval="false" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)" class="example-card">
+    <ng-template ngbSlide *ngFor="let img of images; index as i">
+        <div class="carousel-caption">
+            <h3>My slide {{i + 1}} title</h3>
+        </div>
+        <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
+            <div class="picsum-img-wrapper">
+                <img [src]="img" alt="My image {{i + 1}} description">
+            </div>
+        </a>
+    </ng-template>
+</ngb-carousel>
+<hr> -->
